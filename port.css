@@ -231,7 +231,6 @@ span{
     content: "Software Developer";
     color: #b74b4b;
     animation: words 20s infinite, typing 20s steps(20) infinite;
-    white
 }
 
 .text-animation span::after{
