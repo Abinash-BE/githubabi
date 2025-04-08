@@ -21,3 +21,22 @@ menuIcon.onclick= () => {
 menuIcon.classList.toggle('bx-bx');
 navbar.classList.toggle('active');
 }
+
+src="https://cdn.emailjs.com/dist/email.min.js"
+
+(function(){
+    emailjs.init("99mk0JKG8Bj0Xurmv");
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_sconzzb', 'template_h9t44xd', this)
+    .then(()=> {
+        alert('message sent successfully!');
+        this.reset();
+    }, (error) => {
+        console.error('FAILED...', error);
+        alert('Oops! Something went wrong.');
+    });
+});
