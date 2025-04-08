@@ -23,7 +23,7 @@ navbar.classList.toggle('active');
 }
 
 (function(){
-    emailjs.init("99mk0JKG8Bj0Xurmv");
+    emailjs.init("99mkOJKG8Bj0Xurmv");
 })();
 
 document.getElementById('contact-form').addEventListener('submit', function(e){
