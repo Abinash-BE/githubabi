@@ -4,7 +4,7 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
 sections.forEach(sec => {
-let top = window.scrolly;
+let top = window.scrollY;
 let offset = sec.offsetTop-150;
 let height = sec.offsetHeight;
 let id = sec.getAttribute('id');
@@ -21,8 +21,6 @@ menuIcon.onclick= () => {
 menuIcon.classList.toggle('bx-bx');
 navbar.classList.toggle('active');
 }
-
-src="https://cdn.emailjs.com/dist/email.min.js"
 
 (function(){
     emailjs.init("99mk0JKG8Bj0Xurmv");
