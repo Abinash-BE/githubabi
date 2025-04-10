@@ -22,13 +22,4 @@ menuIcon.classList.toggle('bx-bx');
 navbar.classList.toggle('active');
 }
 
-function sendMail(){
-    let parms = {
-        name : document.getElementById("name").value,
-        email: document.getElementById("(email").value,
-        subject: document.getElementById("subject").value,
-        message: document.getElementById("message").value,
-    }
-
-    emailjs.send("service_sconzzb", "template_h9t44xd", parms).then(alert("Email sent!!"))
-}
+ 
