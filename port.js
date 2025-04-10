@@ -22,19 +22,13 @@ menuIcon.classList.toggle('bx-bx');
 navbar.classList.toggle('active');
 }
 
-(function(){
-    emailjs.init("99mKOJKG8Bj0Xurmv");
-})();
+function sendMail(){
+    let parms = {
+        name : document.getElementById("name").value,
+        email: document.getElementById("(email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
 
-document.getElementById('contact-form').addEventListener('submit', function(e){
-    e.preventDefault();
-
-    emailjs.sendForm('service_sconzzb', 'template_h9t44xd', this)
-    .then(()=> {
-        alert('message sent successfully!');
-        this.reset();
-    }, (error) => {
-        console.error('FAILED...', error);
-        alert('Oops! Something went wrong.');
-    });
-});
+    emailjs.send("service_sconzzb", "template_h9t44xd", parms).then(alert("Email sent!!"))
+}

@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="port.css">
     <title>Abinash Portfolio</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "99mKOJKG8Bj0XurmV",
+      });
+   })();
+</script>
 </head>
 <body>
     <header>
@@ -141,7 +151,7 @@
         <div class="input-group-2">
         <textarea name="message" id="message" cols="30"
         rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="send Message" class="btn">
+        <input type="submit" value="send Message" class="btn" onclick="sendMail()">
         </div>
         </form>
         </section>
