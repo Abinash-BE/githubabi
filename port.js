@@ -22,4 +22,30 @@ menuIcon.classList.toggle('bx-bx');
 navbar.classList.toggle('active');
 }
 
- 
+ const words = ["Software developer", "Frontent-Developer", "Web Designer", "App Developer", "UI/UX Designer"];
+ let i= 0;
+ let j= 0;
+ let currentWord = '';
+ let isDeleting = false;
+
+ function type() {
+    currentWord = words[i];
+    let displayText = isDeleting
+    ? currentWord.substring(0, j--)
+    : currentWord.substring(0, j++);
+
+    document.querySelector(".auto-type").textContent = displayText;
+
+    if (!isDeleting && j === currentWord.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+    }else if (isDeleting && j === 0) {
+        isDeleting = false;
+        i = (i+1)% words.length;
+        setTimeout(type, 500);
+    }else {
+        setTimeout(type, isDeleting ? 50 : 100);
+    }
+ }
+
+ type();
