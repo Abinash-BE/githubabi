@@ -574,6 +574,7 @@ text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     gap: 15px;
     padding: 10px 0;
