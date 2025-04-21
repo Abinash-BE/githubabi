@@ -252,7 +252,7 @@ span{
     animation: blink 0.7s infinite;
 }
 
-@keyframes bling {
+@keyframes blink {
     0% { border-color: #b74b4b}
     50% {border-color: transparent; }
     100% {border-color: #b74b4b}
@@ -521,7 +521,7 @@ margin: 0 10px;
 transition: 0.3s ease-in-out;
 }
 .footer .social a:hover{
-transform: scale (1.2) translateY(-10px);
+transform: scale(1.2) translateY(-10px);
 background-color: var(--main-color);
 color: black;
 box-shadow: 0 0 25px var(--main-color);
@@ -576,8 +576,8 @@ text-align: center;
     align-items: center;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
-    gap: 15px;
-    padding: 10px 0;
+    gap: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #add;
 }
 
@@ -609,13 +609,28 @@ text-align: center;
     border-bottom: 1.5px solid var(--main-color);
 }
 
+@media screen and (max-width: 768px) {
+    .contact-item {
+      display: flex;  
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0;
+    }
+  
+    .contact-item h4 {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+
 @media(max-width: 600px){
     .my-contact{
         padding: 15px;
     }
     .contact-item{
         flex-direction: column;
-        align-items: flex-start;
     }
     .contact-item i {
         font-size: 20px;
